@@ -130,6 +130,7 @@ if (UPNP_BUILD_SHARED)
 		PRIVATE $<$<CONFIG:Debug>:STATS>
 		PRIVATE LIBUPNP_EXPORTS
 		PUBLIC $<IF:$<CONFIG:Debug>,DEBUG,NDEBUG>
+		PUBLIC UPNP_DEBUG_C
 	)
 
 	target_compile_options (upnp_shared
@@ -189,6 +190,7 @@ if (UPNP_BUILD_STATIC)
 		PRIVATE LIBUPNP_EXPORTS
 		PRIVATE $<$<CONFIG:Debug>:STATS>
 		PUBLIC $<IF:$<CONFIG:Debug>,DEBUG,NDEBUG>
+		PUBLIC UPNP_DEBUG_C
 	)
 
 	target_compile_options (upnp_static
